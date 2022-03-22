@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">assign21</string>
+    <string name="first_name">first name</string>
+    <string name="uniqueID">unique ID</string>
+    <string name="last_name">last name</string>
+    <string name="rewards">rewards</string>
+    <string name="add">add</string>
+    <string name="display_info">Display Info</string>
+    <string name="button_delete">Delete</string>
+</resources>
