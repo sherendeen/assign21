@@ -62,13 +62,28 @@ class DBHelper (var context: Context, factory: SQLiteDatabase.CursorFactory?) :
 
     }
 
-    fun getData(uid:Int):Cursor?{
+    fun getData(uid:Int):String{
         val db = this.readableDatabase
+        var result = "No data in DB"
+        val cursor : Cursor  =
+            db.rawQuery("SELECT * FROM " + table_name + " WHERE $id_col='"+uid+"';" ,
+                null)
+        try{
+            if(cursor.count != 0){
+                val stringBuffer = StringBuffer()
+                while( cursor.moveToNext()){
+                    stringBuffer.append("ID :" + cursor.getInt(0).toString() + "\n")
+                    stringBuffer.append("FIRST NAME :" + cursor.getString(1).toString() + "\n")
+                    stringBuffer.append("LAST NAME :" + cursor.getString(2).toString() + "\n")
+                    stringBuffer.append("REWARD :" + cursor.getDouble(3).toString() + "\n\n")
+                }
+                result = stringBuffer.toString()
+            }
+        } catch (e:Exception) {
+            e.printStackTrace()
+        }
+        return result
 
-        // below code returns a cursor to
-        // read data from the database
-        Log.e("DB CURSOR","Selecting data from table where uid = $uid now")
-        return db.rawQuery("SELECT * FROM " + table_name + " WHERE uid='"+uid+"';" , null)
     }
 
     fun removeDataByUid(uid:Int):Cursor?{

@@ -6,62 +6,85 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <EditText
         android:id="@+id/uniqueID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="71dp"
         android:hint="@string/uniqueID"
-        android:inputType="number"
-        />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/first_name"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginBottom="260dp"
+        android:hint="@string/first_name" />
+
     <EditText
         android:id="@+id/last_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/last_name"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="183dp"
+        android:hint="@string/last_name" />
+
     <EditText
         android:id="@+id/rewards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/rewards"
-        />
-
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="631dp"
+        android:hint="@string/rewards" />
 
     <Button
         android:id="@+id/button_add"
-        android:text="@string/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="add"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="253dp"
+        android:layout_marginEnd="36dp"
+        android:text="@string/add" />
 
     <Button
         android:id="@+id/button_display_info"
-        android:text="@string/display_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="displayInfo"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="252dp"
+        android:text="@string/display_info" />
 
     <Button
         android:id="@+id/button_delete"
-        android:text="@string/button_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="delete"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="252dp"
+        android:text="@string/button_delete" />
 
     <TextView
         android:id="@+id/text_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="51dp"
         android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
